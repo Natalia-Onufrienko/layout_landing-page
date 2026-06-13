@@ -1,17 +1,18 @@
 .product {
+  cursor: pointer;
+
+  &__image {
+    overflow: hidden;
+    border-radius: 8px;
+  }
   &__photo {
     width: 100%;
-    overflow: hidden; // щоб зображення не виходило за межі
+    display: block;
+    transition: transform 0.3s ease;
+  }
 
-    img {
-      display: block;
-      width: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    &:hover img {
-      transform: scale(1.05);
-    }
+  &:hover &__photo {
+    transform: scale(1.05);
   }
 
   &__description {

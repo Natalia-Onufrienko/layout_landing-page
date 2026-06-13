@@ -13,20 +13,18 @@
   }
 
   &--phone {
-    background-image: url(/images/icons/Phone-number.png);
+    background-image: url(../images/icons/Icon-Phone-call.svg);
   }
 
   &--menu {
-    background-color: red;
-    background-image: url(/images/icons/Icon-Burger-menu.png);
+    background-image: url(../images/icons/Icon-Burger-menu.svg);
 
     &:hover {
-      background-image: url(//images/icons/Icon-Burger-menu-hover.png);
+      background-image: url(../images/icons/Icon-Burger-menu-hover.svg);
     }
   }
 
   &--close {
-    background-color: red;
-    background-image: url(./images/icons/Icon-Close.png);
+    background-image: url(../images/icons/Icon-Close.svg);
   }
 }
