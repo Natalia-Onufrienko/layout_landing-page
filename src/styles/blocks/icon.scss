@@ -5,6 +5,9 @@
   background-size: cover;
   background-position: center;
 
+  position: relative;
+  z-index: 1;
+
   @include hover(transform, scale(1.2));
 
   @include on-tablet {
@@ -14,6 +17,31 @@
 
   &--phone {
     background-image: url(../images/icons/Icon-Phone-call.svg);
+
+    &::before {
+      content: attr(data-phone-number);
+      position: absolute;
+
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%) translateX(20px);
+
+      font-size: 16px;
+      font-weight: 700;
+      color: #292929;
+
+      white-space: nowrap;
+
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    @include on-desktop {
+      &:hover::before {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
   }
 
   &--menu {
